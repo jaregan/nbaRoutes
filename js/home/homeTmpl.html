@@ -1,3 +1,57 @@
 <div class="inner-container">
+<div class="team-container">
+	<img src='images/jazz-logo.png' height="200px">
+	<h4>
+      <u>Utah Jazz</u> <br>
+      Wins: {{jazzData.wins}}<br>
+      Losses: {{jazzData.losses}}
+    </h4>
+    <div class="together-game" ng-repeat="game in jazzData" ng-class="{'even' : $index % 2 === 0}">
+      <!-- Each game should end up looking something like this:
+        Date: May 29, 1997
+        Utah Jazz - 103
+        Houston Rockets - 100
+      -->
+      Date: {{game.createdAt | date}} <br />
+      Utah Jazz - {{game.homeTeamScore}} <br />
+      {{game.opponent}} - {{game.opponentScore}} </br />
+      </div>
+</div>
 
+<div class="team-container">
+	<img src='images/lakers-logo.png' height='200px'>
+	<h4>
+      <u>Los Angeles Lakers</u> <br>
+      Wins: {{lakersData.wins}}<br>
+      Losses: {{lakersData.losses}}
+    </h4>
+    <div class="together-game" ng-repeat="game in lakersData" ng-class="{'even' : $index % 2 === 0}">
+      <!-- Each game should end up looking something like this:
+        Date: May 29, 1997
+        Utah Jazz - 103
+        Houston Rockets - 100
+      -->
+      Date: {{game.createdAt | date}} <br />
+      Los Angeles Lakers - {{game.homeTeamScore}} <br />
+      {{game.opponent}} - {{game.opponentScore}} </br />
+      </div>
+</div>
+
+<div class="team-container">
+	<img src='images/heat-logo.png' height="200px">
+	<h4>
+      <u>Miami Heat</u> <br>
+      Wins: {{heatData.wins}}<br>
+      Losses: {{heatData.losses}}
+    </h4>
+    <div class="together-game" ng-repeat="game in heatData" ng-class="{'even' : $index % 2 === 0}">
+      <!-- Each game should end up looking something like this:
+        Date: May 29, 1997
+        Utah Jazz - 103
+        Houston Rockets - 100
+      -->
+      Date: {{game.createdAt | date}} <br />
+      Miami Heat - {{game.homeTeamScore}} <br />
+      {{game.opponent}} - {{game.opponentScore}} </br />
+      </div>
 </div>
